@@ -3,53 +3,50 @@
 	<div class="main-contentarea">
 
 		<div class="container">
-      <div class="row">
-        <div class="col-12">
-          <div class="add-row-column">
-              <div *ngIf="alertMst" class="alert alert-danger" role="alert">
-                <strong>Oh snap!</strong> {{alertMst}}
-              </div>
-              <form class="main-form" (ngSubmit)="rowColumnForm(rowColumn)" #rowColumn="ngForm"> 
-                  <fieldset class="">
-                      <legend>Add Column</legend>
-                      <div class="row">
-                          <div class="form-group col-md-2">
-                              <label for="column">Column</label>
-                              <input type="number" class="form-control" required ngModel name="column" id="column" placeholder="Add Column">
-                          </div>
-                          <div class="col-md-4 add-row-column_action">
-                              <input type="submit" [disabled]="!rowColumn.valid" name="" id="" class="btn btn-primary " value="Add">
-                          </div>
-                      </div>
-                  </fieldset>
-              </form>
-          </div>
-        </div>
-        <div class="col-12" *ngIf="command">
-            <!-- <div class="alert alert-danger" role="alert">
-              <strong>Oh snap!</strong> Change a few things up and try submitting again.
-            </div> -->
-            <form class="main-form command-form" (ngSubmit)="rowColumnCommandForm(rowColumnCommand)" #rowColumnCommand="ngForm"> 
-                <fieldset class="">
-                  <legend>Command</legend>
-                    <div class="row">
-                        <div class="form-group col-md-2">
-                            <label for="column">Move</label>
-                            <input type="number" class="form-control" required ngModel name="move" id="move" placeholder="move">
-                        </div>
-                        <div class="col-md-3 add-row-column_action">
-                            <input type="submit" [disabled]="!rowColumnCommand.valid" name="" id="" class="btn btn-primary " value="Apply">
-                        </div>
+            <div class="row">
+                <div class="col-12">
+                <div class="add-row-column">
+                    <div *ngIf="alertMst" class="alert alert-danger" role="alert">
+                        <strong>Ohhhh!</strong> {{alertMst}}
                     </div>
-                </fieldset>
-            </form>
-            <table class="table table-bordered text-center command-table">
-              <tr>
-                <td *ngFor="let columnData of columnLoopData" contenteditable='true'>{{columnData}}</td>
-              </tr>
-            </table>
-        </div>
-      </div>
+                    <form class="main-form" (ngSubmit)="rowColumnForm(rowColumn)" #rowColumn="ngForm"> 
+                        <fieldset class="">
+                            <legend>Add Column</legend>
+                            <div class="row">
+                                <div class="form-group col-md-2">
+                                    <label for="column">Column</label>
+                                    <input type="number" class="form-control" required ngModel name="column" id="column" placeholder="Add Column">
+                                </div>
+                                <div class="col-md-4 add-row-column_action">
+                                    <input type="submit" [disabled]="!rowColumn.valid" name="" id="" class="btn btn-primary " value="Add">
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+                </div>
+                <div class="col-12" *ngIf="command">
+                    <form class="main-form command-form" (ngSubmit)="rowColumnCommandForm(rowColumnCommand)" #rowColumnCommand="ngForm"> 
+                        <fieldset class="">
+                        <legend>Command</legend>
+                            <div class="row">
+                                <div class="form-group col-md-2">
+                                    <label for="column">Move</label>
+                                    <input type="number" class="form-control" required ngModel name="move" id="move" placeholder="move">
+                                </div>
+                                <div class="col-md-3 add-row-column_action">
+                                    <input type="submit" [disabled]="!rowColumnCommand.valid" name="" id="" class="btn btn-primary " value="Apply">
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+                    <table class="table table-bordered text-center command-table">
+                        <tr>
+                            <td *ngFor="let columnData of columnLoopData" contenteditable='true'>{{columnData}}</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
       
 		</div>
 	</div>

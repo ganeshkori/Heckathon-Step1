@@ -1,6 +1,11 @@
-# Step1
+# Step 1. Set up the Development Environment 
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.6.
+You need to set up your development environment before you can do anything.
+Install <a href="https://nodejs.org/en/download/">Node.js® and npm</a> if they are not already on your machine.
+
+Then install the <a href="https://github.com/angular/angular-cli">Angular CLI</a> globally.
+###npm install -g @angular/cli
+
 
 ## Development server
 
