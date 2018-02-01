@@ -1,0 +1,23 @@
+/* You can add global styles to this file, and also import other style files */
+input[type=number]:-webkit-inner-spin-button, 
+input[type=number]:-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0;
+}
+input[type=number] {
+    -moz-appearance:textfield;
+    text-align: center;
+    padding-left: 0;
+    padding-right: 0;
+}
+.add-row-column_action{
+    margin-top: 33px;
+}
+.main-form legend {
+    margin-bottom: 10px;
+}
+.btn-primary:focus, .form-control:focus {
+    box-shadow: none;
+}
